@@ -9,10 +9,10 @@
 #   python skycore.py forecast --init 2020-12-01T00
 #
 # Models:  s1 = standard, d1 = twice as deep and tuned on longer rollouts,
-#          w1 = small base model for the community, trained on GFS only.
-# Data:    r1  = NCEP/NCAR Reanalysis 1 (NOAA PSL), 2.5 degree, 6-hourly
-#          gfs = NOAA GFS analyses from the NOAA Open Data Dissemination
-#                bucket on AWS (CC0), 1 degree, regridded to 2.5 degree
+#          w1 = small base model for the community.
+# Data:    r1  = reanalysis fields, 2.5 degree, 6-hourly
+#          gfs = GFS analysis fields (openly licensed, CC0), 1 degree,
+#                regridded to 2.5 degree
 # No pretrained weights and no third-party model code are used.
 
 import argparse
@@ -171,7 +171,7 @@ def prepare(years, names, data_dir, keep_raw=False):
 
 
 # --------------------------------------------------------------------------
-# data: GFS analyses (NOAA Open Data Dissemination, CC0)
+# data: GFS analysis fields (openly licensed, CC0)
 # --------------------------------------------------------------------------
 
 GFS = "https://noaa-gfs-bdp-pds.s3.amazonaws.com"

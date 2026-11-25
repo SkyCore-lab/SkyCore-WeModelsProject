@@ -1,8 +1,8 @@
 # SkyCore W1
 
-A from-scratch, open-source **small global weather forecasting model** — a tiny GraphCast-style network. W1 is the shared base of the SkyCore "We Models" project: both the code and the weights are open, and it is trained **only on CC0 (public-domain) data**.
+A from-scratch, open-source **small global weather forecasting model** — a tiny GraphCast-style network. W1 is the shared base of the SkyCore "We Models" project: both the code and the weights are open, and it is trained **only on openly licensed (public-domain / CC0) data**.
 
-> This repository is the community base. The rule for the "We" line: the base is **W-series only** (never S/D), and training data must be **CC0 only**.
+> This repository is the community base. The rule for the "We" line: the base is **W-series only** (never S/D), and training data must be **openly licensed (CC0) only**.
 
 ---
 
@@ -30,7 +30,7 @@ RMSE (lower is better) on the test period **2025–2026**, 130 forecasts. For re
 - **Beats both persistence and climatology at every lead and variable** — it genuinely forecasts the weather.
 - Anomaly correlation (ACC ≥ 0.6, the usual "useful forecast" threshold) holds to about **6 days** for z500 and about **5.5 days** for t850 and slp.
 
-> **Note on comparability.** These numbers are measured on W1's own test data (GFS analysis, a coarse 2.5° grid). They are **not directly comparable** to GraphCast or operational high-resolution models, which use finer grids and different ground truth. Read them as confirmation that W1 is a working weather model, not as a leaderboard ranking.
+> **Note on comparability.** These numbers are measured on W1's own test data on a coarse 2.5° grid. They are **not directly comparable** to GraphCast or operational high-resolution models, which use finer grids and different ground truth. Read them as confirmation that W1 is a working weather model, not as a leaderboard ranking.
 
 ---
 
@@ -45,13 +45,12 @@ RMSE (lower is better) on the test period **2025–2026**, 130 forecasts. For re
 
 ---
 
-## Training data (CC0 only)
+## Training data
 
-- **GFS analysis** (the initial conditions of NOAA's numerical forecast model), distributed via **NOAA Open Data Dissemination (NODD)**, license **CC0 1.0 (public domain)**.
-- Fetched on a 1° grid and regridded to 2.5° with light smoothing. 6-hourly, from 2021 to the present.
+- Openly licensed (public-domain / CC0) analysis fields, fetched on a 1° grid and regridded to 2.5° with light smoothing. 6-hourly, from 2021 to the present.
 - Train: 2021–2024 / Test: 2025–2026.
 
-Keep data in W1 **CC0-only** — that is the rule of the W line.
+Keep data in W1 **openly licensed (CC0) only** — that is the rule of the W line.
 
 ---
 
@@ -95,7 +94,4 @@ Missing libraries (numpy / torch / eccodes, …) are installed on first run. The
 ## License
 
 - Code and weights are both **Apache-2.0**. Use, modify, and redistribute freely.
-
-## Acknowledgment
-
-- Training data (GFS analysis) was obtained from **NOAA Open Data Dissemination (NODD)** (CC0 1.0).
+- Trained only on openly licensed (public-domain / CC0) data.
