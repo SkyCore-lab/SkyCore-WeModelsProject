@@ -4,9 +4,9 @@
 
 ### A 0.7M-parameter global weather model you can train from scratch, and fork
 
-W1 is the open community base of the SkyCore project: a tiny [GraphCast](https://www.science.org/doi/10.1126/science.adi2336)-style network, **small enough to train on one GPU in a few hours**, with both code and weights available under the **KeeAI SkyCore License** (free for research & non-commercial use).
+W1 is the open community base of the SkyCore project: a tiny [GraphCast](https://www.science.org/doi/10.1126/science.adi2336)-style network, **small enough to train on one GPU in a few hours**, with both code and weights fully open and trained **only on openly licensed (CC0) data**.
 
-[![License](https://img.shields.io/badge/license-KeeAI%20SkyCore-6aa6ff.svg)](LICENSE) [![Buy](https://img.shields.io/badge/commercial-buy%20a%20license-4fd6a3.svg)](https://skycore.keeai.cloud/buy)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 ![Params](https://img.shields.io/badge/params-~0.7M-brightgreen.svg)
 [![Stars](https://img.shields.io/github/stars/SkyCore-lab/SkyCore-WeModelsProject?style=social)](https://github.com/SkyCore-lab/SkyCore-WeModelsProject/stargazers)
@@ -23,7 +23,7 @@ W1 is the open community base of the SkyCore project: a tiny [GraphCast](https:/
 - ⚡ **One GPU, a few hours.** Mixed precision + gradient checkpointing + an auto batch-size finder that recovers from out-of-memory on its own.
 - 🌐 **Real forecasts.** Global 2.5° grid (73×144), 6-hour steps, 17 variables, autoregressive out to 10 days.
 - 📈 **Genuinely skillful** (chart below) — beats persistence and climatology on every variable and lead.
-- 🔓 **Source-available.** KeeAI SkyCore License: free for research & non-commercial use, paid for commercial.
+- 🔓 **Open end to end.** Apache-2.0 code and weights; CC0-only training data.
 - 🧩 **A clean base to fork.** Add variables, go to a finer grid, swap the backbone.
 
 ## 📊 Forecast skill
@@ -82,7 +82,5 @@ Fork it, train a variant, open a PR with your scores. Issues and experiments wel
 
 ## 📄 License
 
-W1 is distributed under the **KeeAI SkyCore License** (see [LICENSE](LICENSE)).
-
-- **Free** for research and personal non-commercial use — display **"By KeeAISkyCore"** when you publish.
-- **Commercial use** requires a paid plan: **[skycore.keeai.cloud/buy](https://skycore.keeai.cloud/buy)**.
+- Code and weights are both **Apache-2.0**. Use, modify, and redistribute freely.
+- Trained only on openly licensed (public-domain / CC0) data.
